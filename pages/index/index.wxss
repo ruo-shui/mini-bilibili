@@ -1,0 +1,60 @@
+page {
+  color: #666;
+  padding: 10rpx;
+}
+.nav_wrap .nav {
+  padding: 5rpx;
+  white-space: nowrap;
+}
+.nav_wrap .nav_item {
+  flex: 1;
+  padding: 20rpx 45rpx;
+  font-size: 30rpx;
+  display: inline-block;
+}
+.nav_wrap .active {
+  border-bottom: 5rpx solid #de688b;
+}
+.slides {
+  padding-top: 10rpx;
+}
+.slides swiper {
+  height: 220rpx;
+}
+.slides swiper image {
+  width: 100%;
+}
+.video_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10rpx;
+}
+.video_wrap .video_item {
+  width: 48%;
+  margin-bottom: 10rpx;
+}
+.video_wrap .video_item .video_img {
+  position: relative;
+}
+.video_wrap .video_item .video_img image {
+  width: 100%;
+  border-radius: 15rpx;
+}
+.video_wrap .video_item .video_img .video_info {
+  position: absolute;
+  left: 0;
+  bottom: 10rpx;
+  color: #fff;
+  display: flex;
+}
+.video_wrap .video_item .video_img .video_info view {
+  padding-left: 25rpx;
+}
+.video_wrap .video_item .video_desc {
+  font-size: 28rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,55 @@
+<!--pages/detail/detail.wxml-->
+<view class="main">
+	<MyTitle></MyTitle>
+	<!-- 视频详情 -->
+	<view class="video_info">
+		<!-- 视频标签 -->
+		<video src="http://activity.hdslb.com/blackboard/static/20190301/3a8cb419bf0d34f5fa091ce416627f82/HJT64iULE.mp4"></video>
+		<!-- 视频标题 -->
+		<view class="video_title">{{videoInfo.videoTitle}}</view>
+		<!-- 视频信息 -->
+		<view class="video_info">
+			<!-- 作者 -->
+			<text class="author">{{videoInfo.author}}</text>
+			<!-- 播放量 -->
+			<text class="play_count">{{videoInfo.playCount}}</text>
+			<!-- 评论量 -->
+			<text class="comment_count">{{videoInfo.commentCount}}弹幕</text>
+			<!-- 时间 -->
+			<text class="data">{{videoInfo.date}}</text>
+		</view>
+	</view>
+	<!-- 推荐列表 -->
+	<view class="other_list">
+		<navigator wx:for="{{othersList}}" wx:key="{{index}}" class="other_item">
+			<view class="other_img_wrap">
+				<image mode="widthFix" src="{{item.imgSrc}}" class="other_img"></image>
+			</view>
+			<view class="other_info">
+				<view class="other_title">{{item.title}}</view>
+				<view class="other_detail">
+					<view class="paly_count">{{item.playMsg}}万次观看</view>
+					<view class="comment_count">{{item.commentCount}}弹幕</view>
+				</view>
+			</view>
+		</navigator>
+	</view>
+	<!-- 评论 -->
+	<view class="comment_wrap">
+		<view class="comment_title">
+			评论（{{commentTotalCount}}）
+		</view>
+		<view class="comment_item" wx:for="{{commentsList}}" wx:key="{{index}}">
+			<view class="comment_user">
+				<image class="user_img" mode="widthFix" src="http://i0.hdslb.com/bfs/face/member/noface.jpg@70w_70h_1c_100q.webp"></image>
+			</view>
+			<view class="comment_info">
+				<view class="comment_detail">
+					<text class="user_name">{{item.username}}</text>
+					<text class="date">{{item.commentDate}}</text>
+				</view>
+				<view class="comment_content">{{item.commentInfo}}</view>
+			</view>
+		</view>
+	</view>
+</view>

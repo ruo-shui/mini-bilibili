@@ -1,0 +1,89 @@
+/* pages/detail/detail.wxss */
+.main {
+  padding: 10rpx;
+  color: #666;
+  /* 视频详情 */
+  /* 推荐列表 */
+  /* 评论列表 */
+}
+.main .video_info video {
+  width: 100%;
+}
+.main .video_info .video_title {
+  font-size: 35rpx;
+}
+.main .video_info .video_info {
+  margin-top: 5rpx;
+  font-size: 30rpx;
+}
+.main .video_info .video_info text {
+  padding-right: 20rpx;
+}
+.main .video_info .video_info .author {
+  color: #000;
+}
+.main .other_list .other_item {
+  display: flex;
+  margin-top: 30rpx;
+}
+.main .other_list .other_item .other_img_wrap {
+  width: 30%;
+  padding: 5rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .other_list .other_item .other_img_wrap image {
+  border-radius: 5rpx;
+}
+.main .other_list .other_item .other_info {
+  width: 70%;
+  padding-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.main .other_list .other_item .other_info .other_title {
+  font-size: 30rpx;
+  color: #e06f93;
+}
+.main .other_list .other_item .other_info .other_detail {
+  display: flex;
+}
+.main .other_list .other_item .other_info .other_detail view {
+  font-size: 28rpx;
+  padding: 10rpx;
+}
+.main .comment_wrap {
+  margin-top: 10rpx;
+}
+.main .comment_wrap .comment_title {
+  padding: 20rpx;
+  font-size: 28rpx;
+}
+.main .comment_wrap .comment_item {
+  display: flex;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid #aaa;
+}
+.main .comment_wrap .comment_item .comment_user {
+  text-align: center;
+  flex: 1;
+}
+.main .comment_wrap .comment_item .comment_user image {
+  width: 60%;
+  border-radius: 50%;
+}
+.main .comment_wrap .comment_item .comment_info {
+  flex: 6;
+}
+.main .comment_wrap .comment_item .comment_info .comment_detail {
+  display: flex;
+  justify-content: space-between;
+}
+.main .comment_wrap .comment_item .comment_info .comment_content {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+  color: #000;
+}

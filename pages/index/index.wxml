@@ -1,0 +1,52 @@
+<!--pages/index/index.wxml-->
+<view class="main">
+	<!-- 公共头部 -->
+	<MyTitle></MyTitle>
+	<!-- 首页导航 -->
+	<view class="nav_wrap">
+		<scroll-view class="nav" scroll-x>
+			<view class="nav_item {{index===currentIndex?'active':''}}"
+			 wx:for="{{navList}}" 
+			 wx:key="{{index}}" 
+			 bindtap="navClick" data-index="{{index}}">
+				{{item.text}}
+			</view>
+		</scroll-view>
+	</view>
+	<!-- 轮播图 -->
+	<view class="slides">
+		<!-- swiper默认宽高：100% 150px -->
+		<!-- image默认宽高：320px 240px -->
+		<!-- 设计图片宽度100%，高度自适应，480*141 -->
+		<swiper autoplay indicator-dots circular>
+			<swiper-item wx:for="{{swiperList}}" wx:key="{{index}}">
+				<navigator>
+					<image mode="widthFix" src="{{item.imgSrc}}"></image>
+				</navigator>
+			</swiper-item>
+		</swiper>
+	</view>
+	<!-- 视频列表 -->
+	<view class="video_wrap">
+		<navigator url="../detail/detail?id={{item.id}}" class="video_item" wx:for="{{videoList}}" wx:key="{{index}}">
+			<!-- 视频图片 -->
+			<view class="video_img">
+				<image mode="widthFix" src="{{item.imgSrc}}"></image>
+				<view class="video_info">
+					<!-- 播放量 -->
+					<view class="play_count_wrap">
+						<text class="iconfont iconsee"></text>
+						<text class="play_count">{{item.playCount}}</text>
+					</view>
+					<!-- 评论量 -->
+					<view class="comment_count_wrap">
+						<text class="comment iconfont iconcomment"></text>
+						<text class="comment_count">{{item.commentCount}}</text>
+					</view>
+				</view>
+			</view>
+			<!-- 视频标题 -->
+			<view class="video_desc">{{item.desc}}</view>
+		</navigator>
+	</view>
+</view>

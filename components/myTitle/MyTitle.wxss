@@ -1,0 +1,30 @@
+/* components/myTitle/MyTitle.wxss */
+.my-title {
+  display: flex;
+  padding: 10rpx;
+}
+.my-title .logo_icon {
+  flex: 7;
+}
+.my-title image {
+  vertical-align: middle;
+}
+.my-title .search_icon {
+  flex: 1;
+  text-align: center;
+}
+.my-title .user_icon {
+  flex: 2;
+  text-align: center;
+}
+.my-title .down_app {
+  flex: 3;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  color: #fff;
+  border-radius: 10rpx;
+  padding: 10rpx;
+}

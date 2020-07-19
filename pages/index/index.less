@@ -1,0 +1,66 @@
+page{
+	color: #666;
+	padding: 10rpx;
+}
+// 首页导航
+.nav_wrap{
+	.nav{
+		padding: 5rpx;
+		white-space: nowrap;
+	}
+	.nav_item{
+		flex: 1;
+		padding: 20rpx 45rpx;
+		font-size: 30rpx;
+		display: inline-block;
+	}
+	.active{
+		border-bottom: 5rpx solid #de688b;
+	}
+}
+//轮播图
+.slides{
+	padding-top: 10rpx;
+	swiper{
+		height: 220rpx;
+		image{
+			width: 100%;
+		}
+	}
+}
+//视频列表
+.video_wrap{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 10rpx;
+	.video_item{
+		width: 48%;
+		margin-bottom: 10rpx;
+		.video_img{
+			position: relative;
+			image{
+				width: 100%;
+				border-radius: 15rpx;
+			}
+			.video_info{
+				position: absolute;
+				left: 0;
+				bottom: 10rpx;
+				color: #fff;
+				display: flex;
+				view{
+					padding-left: 25rpx;
+				}
+			}
+		}
+		.video_desc{
+			font-size: 28rpx;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp:2;
+			-webkit-box-orient:vertical;
+		}
+	}
+}
+
